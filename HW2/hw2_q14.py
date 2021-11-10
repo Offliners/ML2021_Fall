@@ -19,7 +19,7 @@ def flipCoin(dataNum, seed):
 
 diff = []
 expTimes = 100
-for i in range(100):
+for i in range(expTimes):
     coinData_train = flipCoin(200, i)
     coinData_test = flipCoin(5000, i)
     X_train, y_train = coinData_train[:, :3], coinData_train[:, 3]
