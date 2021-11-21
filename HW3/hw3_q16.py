@@ -14,7 +14,7 @@ def readFile(path):
     return np.array(X), np.array(y)
 
 def transform(data) :
-    index = np.random.randint(0, 10, 5)           
+    index = np.sort(np.random.choice(range(10), 5, False))           
     data_tf = np.column_stack(((np.ones(len(data)), data[:, index])))
     
     return data_tf
@@ -32,7 +32,7 @@ def ZeroOneError(X_pred, y):
     err = np.mean(y != y_pred)
 
     return err
-  
+
 X_train, y_train = readFile(train_filePath)
 X_test, y_test = readFile(test_filePath)
 
