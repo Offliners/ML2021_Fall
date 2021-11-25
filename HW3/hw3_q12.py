@@ -3,9 +3,6 @@ import numpy as np
 train_filePath = 'hw3_train.dat'
 test_filePath = 'hw3_test.dat'
 
-train_filePath = 'hw3_train.dat'
-test_filePath = 'hw3_test.dat'
-
 def readFile(path):
     X = []
     y = []
