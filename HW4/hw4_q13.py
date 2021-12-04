@@ -51,8 +51,8 @@ best_log10_lambda = 0
 for log10_lambda in (-4, -2, 0, 2, 4):
     c = 0.5 * (1 / 10 ** log10_lambda)
     model = train(y_train, X_train_tf, '-s 0 -c ' + str(c) + ' -e 0.000001')
-    Pred_test, _, _ = predict(y_train, X_train_tf, model)
-    Ein = ZeroOneError(y_train, Pred_test)
+    Pred_train, _, _ = predict(y_train, X_train_tf, model)
+    Ein = ZeroOneError(y_train, Pred_train)
 
     if Ein == minEin:
         best_log10_lambda = max(best_log10_lambda, log10_lambda)
