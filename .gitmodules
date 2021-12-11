@@ -1,0 +1,3 @@
+[submodule "HW4/liblinear"]
+	path = HW4/liblinear
+	url = https://github.com/cjlin1/liblinear
