@@ -27,7 +27,7 @@ for gamma in range(5):
     p_label, p_acc, p_val = svm_predict(new_y_test, X_test, model)
 
     Eout = 100 - p_acc[0]
-    print(f'C = {g} : Eout = {Eout}')
+    print(f'Gamma = {g} : Eout = {Eout}')
     if Eout < minEout:
         minEout = Eout
         ans = g
