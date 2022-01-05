@@ -12,8 +12,6 @@ def relabel(dataset, target):
 train_filePath = 'satimage.scale'
 
 y_train, X_train = svm_read_problem(train_filePath)
-X_upper = max(X_train[0].keys())
-X_lower = min(X_train[0].keys())
 
 max_num_sv = 0
 ans = 0
