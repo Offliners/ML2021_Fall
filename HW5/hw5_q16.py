@@ -42,6 +42,7 @@ for expTime in range(expTimes):
     
     best_gamma_list[best_g] += 1
 
+print(best_gamma_list)
 maxTimes = 0
 best_gamma = 0
 for g, times in best_gamma_list.items():
