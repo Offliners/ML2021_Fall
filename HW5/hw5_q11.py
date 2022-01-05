@@ -16,7 +16,7 @@ X_upper = max(X_train[0].keys())
 X_lower = min(X_train[0].keys())
 new_y_train = relabel(y_train, 5)
 
-model = svm_train(new_y_train, X_train, '-c 10 -t 0')
+model = svm_train(new_y_train, X_train, '-s 0 -c 10 -t 0')
 w = np.zeros(X_upper)
 for i in range(len(model.get_sv_coef())):
     support_vector = [model.get_SV()[i].get(item) for item in range(X_lower, X_upper + 1)]
