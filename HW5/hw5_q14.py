@@ -14,8 +14,6 @@ test_filePath = 'satimage.scale.t'
 
 y_train, X_train = svm_read_problem(train_filePath)
 y_test, X_test = svm_read_problem(test_filePath)
-X_upper = max(X_train[0].keys())
-X_lower = min(X_train[0].keys())
 
 minEout = np.inf
 ans = 0
